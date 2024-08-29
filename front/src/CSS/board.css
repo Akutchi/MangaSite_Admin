@@ -1,0 +1,100 @@
+#add-element {
+    text-align: center;
+
+}
+
+.price--line-through {
+    background-color: transparent;
+    background-image: repeating-linear-gradient(180deg, 
+                                                transparent 0%, /* transparence itself */ 
+                                                transparent 39%, #F00 50%, /* top gradient */
+                                                transparent 0%, 
+                                                transparent 100%); /* double ??? */
+}
+
+.price--line-diagonal{
+    background-color: transparent;
+    background-image: gradient(linear, 19.1% -7.9%, 81% 107.9%, color-stop(0, transparent), color-stop(.48, transparent), color-stop(.5, #000), color-stop(.52, transparent), color-stop(1, transparent));
+    background-image: repeating-linear-gradient(163deg, transparent 0%, transparent 48%, #ff0000 50%, transparent 52%, transparent 100%);
+}
+
+
+.form__group {
+    display: flex;
+    position: relative;
+    padding: 15px 0 0;
+    margin-top: 10px;
+}
+
+.form__field {
+
+    font-family: inherit;
+    width: 40%;
+    border: 0;
+    outline: 0;
+    font-size: 0.9em;
+    color: #FFF;
+    background: transparent;
+    transition: border-color 0.2s;
+
+    &::placeholder {
+        color: transparent;
+    }
+    &:placeholder-shown ~ .form__label {
+    font-size: 1.3rem;
+    cursor: text;
+    top: 20px;
+  }
+}
+
+.form__field_2 { /* same as form_field but for the input name in the board editor - width different */
+
+    font-family: inherit;
+    width: 70%;
+    border: 0;
+    outline: 0;
+    font-size: 1.3rem;
+    color: #FFF;
+    padding: 7px 0;
+    background: transparent;
+    transition: border-color 0.2s;
+    margin-left: 14%;
+
+    &::placeholder {
+        color: transparent;
+    }
+    &:placeholder-shown ~ .form__label {
+    font-size: 1.3rem;
+    cursor: text;
+    top: 20px;
+  }
+}
+
+
+.form__label {
+    position: absolute;
+    top: 0;
+    display: block;
+    transition: 0.2s;
+    font-size: 1rem;
+    color: #9b9b9b;
+}
+
+
+.form__field:focus, .form__field_2:focus {
+
+    font-weight: 700;
+    border-width: 3px;
+    border-image-slice: 1;
+}
+
+/* reset input */
+.form__field, .form__field_2{
+    &:required,&:invalid { box-shadow:none; }
+}
+
+button[id^="visible"] {
+    background-color: white;
+    border: solid;
+}
+
