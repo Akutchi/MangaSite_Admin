@@ -3,7 +3,7 @@
 This is the front for the admin part of the [MangaSite Project](https://github.com/Akutchi/MangaSite/tree/master).
 
 ## Important Notice
-For the decryption part in the encryption/decryption scheme for the login; I used at the time
+For the decryption part in the encryption/decryption scheme for the login; I used at the time\
 ```key.setOptions({encryptionScheme: "pkcs1"});```
 
 However, since the 29/08/24, date at which I created this repository, it so happened that a security breach was fixed that has as a consequence that pkcs1 cannot be used anymore.
